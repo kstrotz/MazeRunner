@@ -15,7 +15,11 @@ int main(int argc, char** argv){
 		fprintf(stderr, "Usage: %s <maze file>\n", argv[0]);
 		return INV_ARGS;
 	}
-	
+
+	char* buffer = (char*) malloc(sizeof(char)*BUFF_SIZE);
+	loadMaze(argv[1], buffer);
+	buffer[1023] = '\0';	
+	printf("%s\n", buffer);
 	return 0;
 
 }

@@ -13,11 +13,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Definitions */
+#define BUFF_SIZE 1024
+
 enum results {
 	SOLVED,
 	INV_ARGS
-}
+};
 
-void loadMaze(const char* mazefile);
+void loadMaze(const char* mazefile, char* buffer);
 
 #endif
