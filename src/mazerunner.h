@@ -17,3 +17,7 @@ enum results {
 	SOLVED,
 	INV_ARGS
 }
+
+void loadMaze(const char* mazefile);
+
+#endif
