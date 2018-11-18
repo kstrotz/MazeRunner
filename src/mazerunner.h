@@ -18,9 +18,10 @@
 
 enum results {
 	SOLVED,
-	INV_ARGS
+	INV_ARGS,
+	LOAD_FAIL
 };
 
-void loadMaze(const char* mazefile, char* buffer);
+int loadMaze(const char* mazefile, char* buffer);
 
 #endif

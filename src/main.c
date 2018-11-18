@@ -17,9 +17,14 @@ int main(int argc, char** argv){
 	}
 
 	char* buffer = (char*) malloc(sizeof(char)*BUFF_SIZE);
-	loadMaze(argv[1], buffer);
+	int chkload = loadMaze(argv[1], buffer);
+	if (chkload != 0){
+		return LOAD_FAIL;
+	}
+
 	buffer[1023] = '\0';	
 	printf("%s\n", buffer);
+
 	return 0;
 
 }
