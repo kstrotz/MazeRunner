@@ -23,7 +23,12 @@ int main(int argc, char** argv){
 	}
 
 	buffer[1023] = '\0';	
-	printf("%s\n", buffer);
+	
+	initscr();
+	printw("%s\n", buffer);
+	refresh();
+	getch();
+	endwin();
 
 	return 0;
 

@@ -10,6 +10,7 @@
 #define MRUNNER_H
 
 /* Include other headers */
+#include <ncurses.h>
 #include <stdio.h>
 #include <stdlib.h>
 
