@@ -31,3 +31,5 @@ int loadMaze(const char* mazefile, char* buffer){
 	
 	return 0;
 }
+
+
