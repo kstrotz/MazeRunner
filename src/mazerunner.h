@@ -27,5 +27,6 @@ enum results {
 
 int loadMaze(const char* mazefile, char* buffer);
 int findStart(const char* buffer);
+int findFinish(const char* buffer);
 
 #endif

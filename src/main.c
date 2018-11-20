@@ -45,18 +45,21 @@ int main(int argc, char** argv){
 	int srow = (start/COLS);
 	int scol = (start%COLS);
 
-	printf("%d %d %d\n", start, srow, scol);
-	
+	/* Find end position */
+	int fin = findFinish(buffer);
+	int frow = (fin/COLS);
+	int fcol = (fin%COLS);
+
 	/* Begin NCURSES and display to screen */
 	initscr();
 	start_color();
 	keypad(stdscr, TRUE);
-	init_pair(1, COLOR_RED, COLOR_CYAN);
+	init_pair(1, COLOR_RED, COLOR_BLACK);
+	init_pair(2, COLOR_GREEN, COLOR_BLACK);
 	printw("%s\n", buffer);
-	mvchgat(srow, scol, 1, A_BLINK, 1, NULL);
+	mvchgat(srow, scol, 1, A_BOLD, 1, NULL);
+	mvchgat(frow, fcol, 1, A_BOLD, 2, NULL);
 	refresh();
-	getch();
-	getch();
 	getch();
 	endwin();
 

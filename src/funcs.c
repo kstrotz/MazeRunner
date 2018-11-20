@@ -48,3 +48,19 @@ int findStart(const char* buffer){
 
 	return pos;
 }
+
+int findFinish(const char* buffer){
+	
+	int pos = 0;
+
+	for (int i = 0; i < BUFF_SIZE; i++){
+		if (buffer[i] == 'E'){
+			break;
+		} else if (buffer[i] == '\n'){
+		} else {
+			pos++;
+		}
+	}
+
+	return pos;
+}
