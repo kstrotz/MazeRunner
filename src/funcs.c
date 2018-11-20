@@ -32,4 +32,19 @@ int loadMaze(const char* mazefile, char* buffer){
 	return 0;
 }
 
+int findStart(const char* buffer){
 
+	int pos = 0;
+
+	for (int i = 0; i < BUFF_SIZE; i++){
+		if (buffer[i] == 'S'){
+			break;
+		} else if (buffer[i] == '\n'){
+		} else {
+			pos++;
+		}
+		
+	}
+
+	return pos;
+}

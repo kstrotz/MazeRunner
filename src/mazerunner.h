@@ -16,6 +16,8 @@
 
 /* Definitions */
 #define BUFF_SIZE 1024
+#define ROWS 20
+#define COLS 40
 
 enum results {
 	SOLVED,
@@ -24,5 +26,6 @@ enum results {
 };
 
 int loadMaze(const char* mazefile, char* buffer);
+int findStart(const char* buffer);
 
 #endif
