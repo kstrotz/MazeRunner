@@ -64,3 +64,17 @@ int findFinish(const char* buffer){
 
 	return pos;
 }
+
+void initMaze(const char* buffer, int srow, int scol, int frow, int fcol){
+
+	initscr();
+	start_color();
+	keypad(stdscr, TRUE);
+	init_pair(1, COLOR_RED, COLOR_BLACK);
+	init_pair(2, COLOR_GREEN, COLOR_BLACK);
+	printw("%s", buffer);
+	mvchgat(srow, scol, 1, A_BOLD, 1, NULL);
+	mvchgat(frow, fcol, 1, A_BOLD, 2, NULL);
+	refresh();
+
+}

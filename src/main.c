@@ -42,24 +42,16 @@ int main(int argc, char** argv){
 
 	/* Find start position */
 	int start = findStart(buffer);
-	int srow = (start/COLS);
-	int scol = (start%COLS);
+	int srow = (start/COLUMNS);
+	int scol = (start%COLUMNS);
 
 	/* Find end position */
 	int fin = findFinish(buffer);
-	int frow = (fin/COLS);
-	int fcol = (fin%COLS);
+	int frow = (fin/COLUMNS);
+	int fcol = (fin%COLUMNS);
 
 	/* Begin NCURSES and display to screen */
-	initscr();
-	start_color();
-	keypad(stdscr, TRUE);
-	init_pair(1, COLOR_RED, COLOR_BLACK);
-	init_pair(2, COLOR_GREEN, COLOR_BLACK);
-	printw("%s\n", buffer);
-	mvchgat(srow, scol, 1, A_BOLD, 1, NULL);
-	mvchgat(frow, fcol, 1, A_BOLD, 2, NULL);
-	refresh();
+	initMaze(buffer, srow, scol, frow, fcol);
 	getch();
 	endwin();
 
