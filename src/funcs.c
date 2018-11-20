@@ -73,8 +73,36 @@ void initMaze(const char* buffer, int srow, int scol, int frow, int fcol){
 	init_pair(1, COLOR_RED, COLOR_BLACK);
 	init_pair(2, COLOR_GREEN, COLOR_BLACK);
 	printw("%s", buffer);
-	mvchgat(srow, scol, 1, A_BOLD, 1, NULL);
 	mvchgat(frow, fcol, 1, A_BOLD, 2, NULL);
+	mvchgat(srow, scol, 1, A_BOLD, 1, NULL);
 	refresh();
+
+}
+
+void usrMove(int y, int x){
+
+	int ch = getch();
+	switch(ch){
+		case KEY_LEFT:
+			mvprintw(y, --x, "-");
+			move(y, x);
+			refresh();
+			break;
+		case KEY_RIGHT:
+			mvprintw(y, x, "-");
+			break;
+		case KEY_UP:
+			mvprintw(--y, x, "|");
+			move(y, x);
+			refresh();
+			break;
+		case KEY_DOWN:
+			mvprintw(++y, x, "|");
+			move(y, x);
+			refresh();
+			break;
+		default:
+			break;
+	}
 
 }

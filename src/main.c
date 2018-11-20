@@ -39,6 +39,8 @@ int main(int argc, char** argv){
 
 	/* Ensure buffer is null terminated */
 	buffer[1023] = '\0';	
+	bool solved = FALSE;
+	int x, y;
 
 	/* Find start position */
 	int start = findStart(buffer);
@@ -52,6 +54,16 @@ int main(int argc, char** argv){
 
 	/* Begin NCURSES and display to screen */
 	initMaze(buffer, srow, scol, frow, fcol);
+	
+	while (solved == FALSE){
+		getyx(stdscr, y, x);
+		if ((y == frow) && (x == fcol)){
+			solved = TRUE;
+		} else {
+			usrMove(y, x);
+		}
+	}
+
 	getch();
 	endwin();
 
