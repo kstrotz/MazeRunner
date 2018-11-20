@@ -89,7 +89,9 @@ void usrMove(int y, int x){
 			refresh();
 			break;
 		case KEY_RIGHT:
-			mvprintw(y, x, "-");
+			mvprintw(y, ++x, "-");
+			move(y, x);
+			refresh();
 			break;
 		case KEY_UP:
 			mvprintw(--y, x, "|");
