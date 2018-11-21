@@ -32,5 +32,6 @@ void initMaze(const char* buffer, int srow, int scol, int frow, int fcol);
 void usrMove(int y, int x);
 void dispWin(void);
 void dispLose(void);
+void defSize(const char* buffer);
 
 #endif

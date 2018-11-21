@@ -37,6 +37,8 @@ int main(int argc, char** argv){
 	}
 #endif
 
+	defSize(buffer);
+
 	/* Ensure buffer is null terminated */
 	buffer[1023] = '\0';	
 	bool solved = FALSE;
