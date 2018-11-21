@@ -31,5 +31,6 @@ int findFinish(const char* buffer);
 void initMaze(const char* buffer, int srow, int scol, int frow, int fcol);
 void usrMove(int y, int x);
 void dispWin(void);
+void dispLose(void);
 
 #endif

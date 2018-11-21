@@ -64,7 +64,8 @@ int main(int argc, char** argv){
 		}
 	}
 
-	dispWin();
+//	dispWin();
+	dispLose();
 
 	return 0;
 

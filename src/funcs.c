@@ -117,3 +117,12 @@ void dispWin(void){
 	endwin();
 
 }
+
+void dispLose(void){
+
+	mvprintw(ROWS+2, 0, "You lost! Please try again.");
+	mvprintw(ROWS+3, 0, "Press ENTER to exit.");
+	getch();
+	endwin();
+
+}
