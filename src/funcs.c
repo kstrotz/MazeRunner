@@ -108,3 +108,12 @@ void usrMove(int y, int x){
 	}
 
 }
+
+void dispWin(void){
+
+	mvprintw(ROWS+2, 0, "You win! Maybe it's time for a harder maze!");
+	mvprintw(ROWS+3, 0, "Press ENTER to exit.");
+	getch();
+	endwin();
+
+}

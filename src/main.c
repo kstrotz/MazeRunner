@@ -64,8 +64,7 @@ int main(int argc, char** argv){
 		}
 	}
 
-	getch();
-	endwin();
+	dispWin();
 
 	return 0;
 
