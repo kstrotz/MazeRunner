@@ -37,10 +37,10 @@ int main(int argc, char** argv){
 	}
 #endif
 
-	defSize(buffer);
+//	defSize(buffer);
 
 	/* Ensure buffer is null terminated */
-	buffer[1023] = '\0';	
+	buffer[(BUFF_SIZE-1)] = '\0';	
 	bool solved = FALSE;
 	int x, y;
 
